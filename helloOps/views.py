@@ -1,11 +1,9 @@
 import textwrap
-
+from django.conf import settings
 from django.http import HttpResponse
 from django.views.generic.base import View
 
-
 class HomePageView(View):
-
     def dispatch(request, *args, **kwargs):
         response_text = textwrap.dedent('''\
             <html>
